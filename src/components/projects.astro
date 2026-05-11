@@ -13,48 +13,53 @@ const PROJECTS = [
 	},
 	{
 		title: "Suplementos Deportivos",
-		description: "E-Commerce enfocado en el mundo del fitness. Mi principal participación fue en el Backend trabajando con un equipo de 3, posteriormente aportando en features mínimas para el frontend. Es el trabajo final integrador de la carrera TUP.",
+		description:
+			"E-Commerce desarollado en equipo como parte del proyecto final integrador de la carrera universitaria, con enfoque en escalabilidad y buenas prácticas. El sistema gestiona usuarios, productos, categorías, carrito, órdenes y reseñas mediante una API REST",
 		link: "https://frontend-suplementos-one.vercel.app/",
 		github: "https://github.com/FrancoPanzone/Backend-BD-TP-Integrador",
 		image: "/projects/Suplementos.webp",
-		tags: ["TypeScript", "PostgreSQL", "React"]
-	}
+		tags: ["TypeScript", "PostgreSQL", "React"],
+	},
 ]
 ---
+
 <div class="flex flex-col gap-16 w-full">
-{
-	PROJECTS.map(({ title, description, image, tags, github, link }) => (
-		<article class="flex flex-col gap-3">
-			<h3 class="text-2xl font-semibold">{title}</h3>
+	{
+		PROJECTS.map(({ title, description, image, tags, github, link }) => (
+			<article class="flex flex-col gap-3">
+				<h3 class="text-2xl font-semibold">{title}</h3>
 
-			<p class="text-pretty leading-relaxed opacity-75">{description}</p>
-			<a href={link} target="_blank" rel="noopener noreferrer">
-				<img
-					class="rounded-xl w-full object-cover hover:scale-[1.01] transition-transform duration-300"
-					src={image}
-					alt={`Captura de pantalla del proyecto ${title}`}
-				/>
-			</a>
+				<p class="text-pretty leading-relaxed opacity-75">
+					{description}
+				</p>
+				<a href={link} target="_blank" rel="noopener noreferrer">
+					<img
+						class="rounded-xl w-full object-cover hover:scale-[1.01] transition-transform duration-300"
+						src={image}
+						alt={`Captura de pantalla del proyecto ${title}`}
+					/>
+				</a>
 
-			<ul class="flex gap-2 flex-wrap">
-				<li>
-					<a
-						href={github}
-						target="_blank"
-						rel="noopener noreferrer"
-						class="rounded-full border border-black/10 flex justify-center items-center bg-gradient-to-r from-blue-300 to-cyan-300 gap-x-2 py-1 px-4 hover:scale-105 transition"
-					>
-						<GithubIcon class="w-5 h-5" />
-						Github
-					</a>
-				</li>
-				{tags.map((tag) => (
-					<li class="rounded-full border border-black/10 flex justify-center items-center gap-x-2 py-1 px-4">
-						{tag}
+				<ul class="flex gap-2 flex-wrap">
+					<li>
+						<a
+							href={github}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="rounded-full border border-black/10 flex justify-center items-center bg-gradient-to-r from-blue-300 to-cyan-300 gap-x-2 py-1 px-4 hover:scale-105 transition"
+						>
+							<GithubIcon class="w-5 h-5" />
+							Github
+						</a>
 					</li>
-				))}
-			</ul>
-		</article>
-	))
-}
-<div/>
+					{tags.map((tag) => (
+						<li class="rounded-full border border-black/10 flex justify-center items-center gap-x-2 py-1 px-4">
+							{tag}
+						</li>
+					))}
+				</ul>
+			</article>
+		))
+	}
+	<div></div>
+</div>
