@@ -4,47 +4,51 @@ import LinkedinIcon from "./icons/linkedin.astro"
 import LocationIcon from "./icons/location.astro"
 ---
 
-<div class="flex flex-col w-full">
-	<article class="flex items-center gap-4">
-		<img
-			class="w-48 h-48 object-cover rounded-xl shrink-0 shadow-xl shadow-black/20"
-			src="/about/marcoss.webp"
-		/>
+<article class="flex flex-col sm:flex-row items-center gap-4">
+	<img
+		class="w-36 h-36 sm:w-48 sm:h-48 object-cover rounded-xl shrink-0 shadow-xl shadow-black/20"
+		src="/about/marcoss.webp"
+	/>
 
-		<div class="flex flex-col py-2">
-			<p class="flex-1 text-pretty text-lg leading-relaxed opacity-90">
-				Soy desarrollador web, graduado de la <span
-					class="text-blue-500"
-					>Tecnicatura Universitaria en Programación</span
-				> de la UTN. Tengo experiencia desarrollando aplicaciones frontend
-				y backend, trabajando con buenas prácticas, tecnologías modernas y
-				desarrollo en equipo. Actualmente busco seguir creciendo profesionalmente
-				y expandir mi experiencia técnica.
-			</p>
-			<ul class="flex gap-2 flex-wrap mt-2">
-				<li>
-					<a
-						href="#"
-						class="rounded-full border border-black/10 flex justify-center items-center bg-blue-400/5 gap-x-2 py-1 px-4 hover:scale-105 hover:bg-blue-400/20 transition"
-					>
-						<LinkedinIcon class="w-5 h-5" />
-						LinkedIn
-					</a>
-				</li>
-				<li>
-					<a
-						href="mailto:marcosborri06@gmail.com"
-						class="rounded-full border border-black/10 flex justify-center items-center bg-blue-400/5 gap-x-2 py-1 px-4 hover:scale-105 hover:bg-blue-400/20 transition"
-					>
-						<EmailIcon class="w-5 h-5" />
-						marcosborri06@gmail.com
-					</a>
-				</li>
-				<li class="rounded-full border border-black/10 flex justify-center items-center gap-x-2 py-1 px-4">
-					<LocationIcon class="w-5 h-5"/>
-					Bahía Blanca, Argentina.
-				</li>
-			</ul>
-		</div>
-	</article>
-</div>
+	<div class="flex flex-col py-2 w-full">
+		<p
+			class="text-pretty text-base sm:text-lg leading-relaxed opacity-90 text-center sm:text-left"
+		>
+			Soy desarrollador web, graduado de la <span class="text-blue-500"
+				>Tecnicatura Universitaria en Programación</span
+			> de la UTN. Tengo experiencia desarrollando aplicaciones frontend y backend,
+			trabajando con buenas prácticas, tecnologías modernas y desarrollo en
+			equipo. Actualmente busco seguir creciendo profesionalmente y expandir
+			mi experiencia técnica.
+		</p>
+
+		<ul class="flex flex-col sm:flex-row gap-2 mt-4 items-center sm:items-start">
+			<li>
+				<a
+					href="#"
+					class="rounded-full border border-black/10 flex justify-center items-center bg-blue-400/5 gap-x-2 py-1 px-4 hover:scale-105 hover:bg-blue-400/20 transition"
+				>
+					<LinkedinIcon class="w-5 h-5" />
+					LinkedIn
+				</a>
+			</li>
+
+			<li>
+				<a
+					href="mailto:marcosborri06@gmail.com"
+					class="rounded-full border border-black/10 flex justify-center items-center bg-blue-400/5 gap-x-2 py-1 px-4 hover:scale-105 hover:bg-blue-400/20 transition"
+				>
+					<EmailIcon class="w-5 h-5" />
+					marcosborri06@gmail.com
+				</a>
+			</li>
+
+			<li
+				class="rounded-full border border-black/10 flex justify-center items-center gap-x-2 py-1 px-4 whitespace-nowrap"
+			>
+				<LocationIcon class="w-5 h-5" />
+				Bahía Blanca, Argentina.
+			</li>
+		</ul>
+	</div>
+</article>
